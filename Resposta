@@ -1,0 +1,14 @@
+function solucao(pedido) {
+    const docesPorSaquinho = 15;
+    let totalDoces = 0;
+
+    
+    for (const doce in pedido) {
+        if (pedido.hasOwnProperty(doce)) {
+            totalDoces += pedido[doce];
+        }
+    }
+
+    const quantidadeSaquinhos = Math.ceil(totalDoces / docesPorSaquinho);
+    console.log (quantidadeSaquinhos);
+}
